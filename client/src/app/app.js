@@ -24,9 +24,18 @@
             templateUrl: 'src/common/footer.tpl.html',
             controller: 'FooterCtrl'
           }
+        }   
+      })
+      .state('subject', {
+        url: "/subject",
+        views: {
+          'main' : {
+            templateUrl: 'src/subjects/subjects.tpl.html',
+            controller: 'SubjectCtrl'
+          }
         }
-      });
-  }
+      })
+    }
 
   function MainCtrl($log) {
     $log.debug('MainCtrl loaded!');
@@ -41,6 +50,7 @@
       'backand',
       'home',
       'getting-started',
+      //'subject',
       'common.header',
       'common.footer',
       'common.services.backand',
